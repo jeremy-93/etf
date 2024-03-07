@@ -152,7 +152,7 @@ ul {
 }
 
 ul ul {
-  margin-bottom: 0;
+  margin-bottom: 0px;
 }
 
 blockquote {
@@ -194,7 +194,7 @@ figure {
 }
 .carousel-item img {
   max-width: 2500px; /* Réglez la largeur sur 100% pour qu'elle s'adapte à la taille du conteneur */
-  height: auto; /* La hauteur s'ajustera automatiquement pour conserver les proportions de l'image */
+  height: 800px; /* La hauteur s'ajustera automatiquement pour conserver les proportions de l'image */
 }
 img {
   vertical-align: middle;
@@ -360,6 +360,7 @@ textarea {
 }
 #carouselExampleIndicators {
   max-width: 2500px;
+  height: 700px;
 }
 #carouselExampleIndicators img {
   width: 100%;
@@ -684,16 +685,30 @@ textarea {
   max-width: 2500px;
 }
 .gallery {
+  max-width: 1500px;
   display: flex;
-  width: 100%;
-  justify-content: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
   align-items: center;
+  gap: 10px; /* Ajuster l'espacement entre les images */
+  margin: 0 auto;
+  padding: 0px 30p;
 }
-.galleryImage {
-  display: grid;
-  grid-template-columns: 1fr;
+.img-container {
+  max-width: 450px;
+  max-height: 450px;
+  height: auto;
+  aspect-ratio: 1/1;
 }
-
+.img-container img {
+  max-width: 450px;
+  max-height: 450px;
+  object-fit: cover;
+  /* Définit un rapport hauteur/largeur carré */
+  transition: all 0.3s ease;
+  height: auto;
+  aspect-ratio: 1/1;
+}
 .gallery {
   display: flex;
   flex-wrap: wrap;
